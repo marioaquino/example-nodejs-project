@@ -27,5 +27,5 @@ Request = function(method, url) {
 // Test: user views front page
 router.dispatch(new Request("GET", "/"), new Response(function(headers, data) {
   assert.contains("200", headers['status'])
-  assert.contains("Hello, world!", data)
+  assert.contains("Hola, woyld!", data)
 }));

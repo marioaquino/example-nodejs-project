@@ -4,12 +4,12 @@ require 'cucumber/rake/task'
 namespace :test do
   task :unit do
     puts "\n\nUNIT TESTS\n----------"
-    puts `node test/unit/*.js`
+    sh 'node spec/spec_helper.js'
     puts 'Tests Complete'
   end
   task :integration do
     puts "\n\nINTEGRATION TESTS\n----------"
-    puts `node test/integration/*.js`
+    sh 'node test/integration/*.js'
     puts 'Tests Complete'
   end
 end

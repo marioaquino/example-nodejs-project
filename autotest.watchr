@@ -1,11 +1,11 @@
 def run_all_tests
   print `clear`
   puts "Tests run #{Time.now.strftime('%Y-%m-%d %H:%M:%S')}"
-  puts `rake`
+  system "rake"
 end
 
 run_all_tests
-watch("(test|lib)(/.*)+.js") { |m| run_all_tests }
+watch("(lib|spec|test|views)(/.*)+.(js|haml)") { |m| run_all_tests }
 
 @interrupted = false
 
